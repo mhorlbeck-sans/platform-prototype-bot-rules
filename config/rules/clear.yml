@@ -1,0 +1,22 @@
+name: clear
+active: true
+respond: clear
+format_output: "${_exec_output}"
+direct_message_only: false
+help_text: |
+  `clear`: clears your chat log with a long, blank message
+  ```
+  Usage:
+
+    `clear`
+
+  The `clear` command  clears your chat log with a long, blank message.
+  ```
+include_in_help: true
+reaction: spinner
+actions:
+  - name: sample script
+    type: exec
+    cmd: python config/scripts/clear.py
+    timeout: 30
+    update_reaction: white_check_mark
